@@ -25,6 +25,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Time report
 
--Design - 1 hour
--Implementation - 3 hours
--Test - 30 minutes
+- Design - 1 hour
+- Implementation - 3 hours
+- Test - 30 minutes
