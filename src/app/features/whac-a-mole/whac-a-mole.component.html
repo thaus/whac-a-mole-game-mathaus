@@ -1,0 +1,24 @@
+<app-whac-a-mole-panel
+  [score]="score$ | async"
+  [highestScore]="highestScore$ | async"
+></app-whac-a-mole-panel>
+
+<div *ngIf="!(isPlaying$ | async)">
+  <button (click)="startGame()">Start Game</button>
+</div>
+
+<div class="wrap-container" *ngIf="isPlaying$ | async">
+  <div class="mole-container">
+    <app-whac-a-mole-circle
+      *ngFor="let mole of moles$ | async"
+      class="mole-container__item"
+      [mole]="mole"
+      (onClick)="whackMole($event)"
+    ></app-whac-a-mole-circle>
+  </div>
+  <div class="timer-container">
+    <app-whac-a-mole-timer
+      [timeLeft]="timeLeft$ | async"
+    ></app-whac-a-mole-timer>
+  </div>
+</div>

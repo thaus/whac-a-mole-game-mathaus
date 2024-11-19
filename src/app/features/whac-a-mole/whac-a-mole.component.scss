@@ -1,0 +1,21 @@
+.wrap-container {
+  max-width: 640px;
+}
+
+.mole-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 100px;
+  background-color: #ccc;
+  padding: 30px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.timer-container {
+  text-align: right;
+}
