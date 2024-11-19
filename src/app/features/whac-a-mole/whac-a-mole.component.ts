@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { WhacAMoleCircleComponent } from './components/whac-a-mole-circle/whac-a-mole-circle.component';
 import { WhacAMolePanelComponent } from './components/whac-a-mole-panel/whac-a-mole-panel.component';
 import { WhacAMoleTimerComponent } from './components/whac-a-mole-timer/whac-a-mole-timer.component';
+import { trackById } from '../../shared/utils/trackby.util';
 
 @Component({
   selector: 'app-whac-a-mole',
@@ -24,6 +25,8 @@ export class WhacAMoleComponent {
   timeLeft$ = this.whacAMoleFacade.timeLeft$;
   moles$ = this.whacAMoleFacade.moles$;
   isPlaying$ = this.whacAMoleFacade.isPlaying$;
+
+  trackById = trackById;
 
   constructor(private whacAMoleFacade: WhacAMoleFacade) {}
 

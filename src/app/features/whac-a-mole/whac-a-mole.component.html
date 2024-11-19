@@ -10,7 +10,7 @@
 <div class="wrap-container" *ngIf="isPlaying$ | async">
   <div class="mole-container">
     <app-whac-a-mole-circle
-      *ngFor="let mole of moles$ | async"
+      *ngFor="let mole of moles$ | async; trackBy: trackById"
       class="mole-container__item"
       [mole]="mole"
       (onClick)="whackMole($event)"
