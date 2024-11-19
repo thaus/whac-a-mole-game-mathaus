@@ -21,7 +21,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 - State Management using Ngrx
 - Unit tests
 - Trackby
-- Reactive Forms
 - Modular Architecure
 
 ## Time report
