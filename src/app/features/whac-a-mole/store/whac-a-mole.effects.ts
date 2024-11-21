@@ -43,7 +43,7 @@ export class GameEffects {
   spawnMoles$ = createEffect(() =>
     this.actions$.pipe(
       ofType(startGame),
-      mergeMap(() => {
+      exhaustMap(() => {
         const spawnInterval = getRandomInt(
           GAME_CONFIG.spawnIntervalMin,
           GAME_CONFIG.spawnIntervalMax
